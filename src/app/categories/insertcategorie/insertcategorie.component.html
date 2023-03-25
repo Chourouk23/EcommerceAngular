@@ -1,0 +1,11 @@
+<form (ngSubmit)="ajoutCat()"> 
+    <div class="mb-3">
+        <input type="text" class="form-control" id="nomcategorie" name="nomcategorie" placeholder="nom categorie" [(ngModel)]="categorie.nomcategorie">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" id="imagecategorie" name="imagecategorie" placeholder="image categorie" [(ngModel)]="categorie.imagecategorie">
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Ajouter</button>
+      </div>
+    </form>

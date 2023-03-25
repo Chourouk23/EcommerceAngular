@@ -1,0 +1,37 @@
+<form (ngSubmit)="Ajoutarticle()"> 
+<div class="mb-3">
+    <label for="reference" class="form-label">Reference</label>
+    <input type="text" class="form-control" id="reference" name="reference" placeholder="reference" [(ngModel)]="article.reference">
+  </div>
+  <div class="mb-3">
+    <label for="designation" class="form-label">designation</label>
+    <input type="text" class="form-control" id="designation" name="designation" [(ngModel)]="article.designation">
+  </div>
+  <div class="mb-3">
+    <label for="prix " class="form-label">prix </label>
+    <input type="number" class="form-control" id="prix " name="prix" [(ngModel)]="article.prix ">
+  </div>
+  <div class="mb-3">
+    <label for="qtestock" class="form-label">Quantité stock</label>
+    <input type="text" class="form-control" id="qtestock" name="qtestock" [(ngModel)]="article.qtestock">
+  </div>
+  <div class="mb-3">
+    <label for="marque" class="form-label">marque</label>
+    <input type="text" class="form-control" id="marque" name="marque" [(ngModel)]="article.marque">
+  </div>
+  <div class="mb-3">
+    <label for="imageart" class="form-label">image</label>
+    <input type="text" class="form-control" id="imageart" name="imageart" [(ngModel)]="article.imageart">
+  </div>
+
+  <div class="mb-3">
+    <select name=" scategorieID" class="form-control" [ngModel]="article.scategorieID">
+      <option *ngFor="let c of scategorie" value="{{c._id}}">
+        {{c.nomscategorie}}
+      </option>
+    </select>
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3">Ajouter</button>
+  </div>
+</form>
